@@ -5,3 +5,26 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+User.delete_all
+Slang.delete_all
+Country.delete_all
+
+users = User.create ([{
+  user_name: "Poncho",
+  email: "p.rabineau@gmail.com",
+  password_digest: "paws123"
+  }])
+
+countries = Country.create([{
+  name: "Spain",
+  gov_type: "Constitutional Monarchy",
+  population: 46000000,
+  capitol: "Madrid"
+}])
+
+slangs = Slang.create ([{
+  phrase: "Guay",
+  translation: "Cool",
+  example: "Que guay!"
+  }])
