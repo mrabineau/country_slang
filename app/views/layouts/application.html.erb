@@ -4,13 +4,12 @@
   <title>CountrySlang</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<p>
-  <%= link_to 'Sign Up', new_user_path %>
-</p>
+
 
 <%= yield %>
 

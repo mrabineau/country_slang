@@ -13,7 +13,8 @@ Country.delete_all
 users = User.create ([{
   user_name: "Poncho",
   email: "p.rabineau@gmail.com",
-  password_digest: "paws123"
+  password: "paws123",
+  password_confirmation: "paws123"
   }])
 
 countries = Country.create([{
