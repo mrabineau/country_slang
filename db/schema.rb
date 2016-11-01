@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161101181852) do
+ActiveRecord::Schema.define(version: 20161101234204) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,8 +31,12 @@ ActiveRecord::Schema.define(version: 20161101181852) do
     t.text     "example"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.string   "country"
+    t.integer  "country_id"
+    t.integer  "user_id"
   end
+
+  add_index "slangs", ["country_id"], name: "index_slangs_on_country_id", using: :btree
+  add_index "slangs", ["user_id"], name: "index_slangs_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "user_name"
@@ -42,4 +46,6 @@ ActiveRecord::Schema.define(version: 20161101181852) do
     t.string   "password_digest"
   end
 
+  add_foreign_key "slangs", "countries"
+  add_foreign_key "slangs", "users"
 end

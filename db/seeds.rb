@@ -39,11 +39,31 @@ slangs = Slang.create ([
   {phrase: "Guay",
   translation: "Cool",
   example: "Que guay!",
-  country: "Spain"},
+  country_id: countries[0].id,
+  user_id: users[0].id},
 
   {phrase: "Estás más loca que una cabra",
    translation: "You are crazier than a goat",
    example: "Que haces?? Estás más loca que una cabra!",
-   country: "Spain"}
+   country_id: countries[0].id,
+   user_id: users[0].id},
+
+   {phrase: "Guagua",
+    translation: "Baby",
+    example: " ",
+    country_id: countries[1].id,
+    user_id: users[0].id},
+
+   {phrase: "Símon",
+    translation: "Yes",
+    example: " ",
+    country_id: countries[1].id,
+    user_id: users[0].id},
+
+   {phrase: "Ay chichi",
+    translation: "Burrrr",
+    example: "  ",
+    country_id: countries[1].id,
+    user_id: users[0].id}
 
   ])
