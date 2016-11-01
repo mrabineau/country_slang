@@ -2,13 +2,14 @@
 <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline|Bungee+Shade|Monoton" rel="stylesheet">
 </head>
 
-  <div class="col-md-4 col-md-offset-4">
+
+  <div class="col-md-1 col-md-offset-4">
     <div class="form" id="c1">
       <% @countries.each do |country| %>
        <div><strong><%= country.name %></strong></div>
         <ul class="list-group">
            <li class="list-group-item">
-           <div><strong>Government Type:  </strong> <%= country.gov_type %> </div>
+           <div><strong>Government Type:  </strong> <%= country.gov_type %></div>
            </li>
            <li class="list-group-item">
            <div><strong>Population:  </strong> <%= country.population %></div>
@@ -16,11 +17,15 @@
            <li class="list-group-item">
            <div><strong>Capitol:  </strong><%= country.capitol %></div>
            </li>
+
+           <%= link_to "edit me", edit_country_path(country) %> <br>
+           <%= link_to "delete me", country_path(country), method: :delete, data: {confirm: "Are you sure???"} %>
         </ul>
 
       <% end %>
 
-    <%= link_to "Add a country!", new_country_path %>
+
+    <div id="add"><strong><%= link_to "Add a country!", new_country_path %></strong></div>
     </div>
 
 <!-- <img src="https://userscontent2.emaze.com/images/a8dbd5bc-ec94-4cb7-a89d-426252953763/bae47c76-3abf-4bc6-b8a1-6eeddb7f6c3aimage96.png" class="img-responsive" alt="Responsive image">

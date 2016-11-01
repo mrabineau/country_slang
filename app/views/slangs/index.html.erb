@@ -1,1 +1,31 @@
-<h1>test</h1>
+
+<head>
+<link href="https://fonts.googleapis.com/css?family=Bungee+Hairline|Bungee+Shade|Monoton" rel="stylesheet">
+</head>
+
+
+  <div class="col-md-1 col-md-offset-4">
+    <div class="form" id="c1">
+      <% @slangs.each do |slang| %>
+       <div><strong><%= slang.phrase %></strong></div>
+        <ul class="list-group">
+           <!-- <li class="list-group-item">
+           <div><strong>Phrase:  </strong> <%= slang.phrase %></div>
+           </li> -->
+           <li class="list-group-item">
+           <div><strong>Translation:  </strong> <%= slang.translation %></div>
+           </li>
+           <li class="list-group-item">
+           <div><strong>Example:  </strong><%= slang.example %></div>
+           </li>
+           <li class="list-group-item">
+           <div><strong>Country:  </strong><%= slang.country %></div>
+           </li>
+
+        </ul>
+
+      <% end %>
+
+
+    <div id="add"><strong><%= link_to "Add some slang!", new_country_path %></strong></div>
+    </div>
