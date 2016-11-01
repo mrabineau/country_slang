@@ -1,0 +1,28 @@
+
+<h1>Add a new country!</h1>
+
+<%= form_for @country do |c| %>
+  <div>
+    <%= c.label :Name %>
+    <%= c.text_field :name %>
+  </div>
+
+   <div>
+    <%= c.label :gov_type %>
+    <%= c.text_field :gov_type %>
+  </div>
+
+   <div>
+    <%= c.label :population %>
+    <%= c.text_field :population %>
+  </div>
+
+   <div>
+    <%= c.label :captiol %>
+    <%= c.text_field :capitol %>
+  </div>
+
+<%= c.submit "Save" %>
+
+<% end %>
+<%= link_to "Back to countries!", countries_path %>

@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
   def index
     @users = User.all
+    if @user.new
+      redirect_to new_user
+    else
+
+    end
   end
 
   def show

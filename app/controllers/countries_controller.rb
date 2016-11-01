@@ -17,9 +17,9 @@ class CountriesController < ApplicationController
   end
 
   def create
-    @country = Country.new(params)
+    @country = Country.new(params.require(:country).permit(:name, :gov_type, :population, :capitol))
     if @country.save
-      redirect_to country_slangs_path
+      redirect_to countries_path
     else
       render 'new'
     end
@@ -31,7 +31,7 @@ class CountriesController < ApplicationController
       else
         render 'edit'
     end
-  end
+  ends
 
   def destroy
     @country = Country.find(params[:id])
@@ -41,7 +41,7 @@ class CountriesController < ApplicationController
 
   private
   def params
-    params.require(:countries).permit(:name, :gov_type, :population, :capitol)
+    params.require(:country).permit(:name, :gov_type, :population, :capitol)
 
   end
 end
