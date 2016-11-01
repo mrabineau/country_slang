@@ -17,15 +17,33 @@ users = User.create ([{
   password_confirmation: "paws123"
   }])
 
-countries = Country.create([{
-  name: "Spain",
+countries = Country.create([
+  {name: "Spain",
   gov_type: "Constitutional Monarchy",
   population: 46000000,
-  capitol: "Madrid"
-}])
+  capitol: "Madrid"},
 
-slangs = Slang.create ([{
-  phrase: "Guay",
+  {name: "Ecuador",
+  gov_type: "Constitutional Republic",
+  population: 16000000,
+  capitol: "Quito"},
+
+  {name: "Peru",
+   gov_type: "Constitutional Republic",
+   population: 31000000,
+   capitol: "Lima"}
+
+  ])
+
+slangs = Slang.create ([
+  {phrase: "Guay",
   translation: "Cool",
-  example: "Que guay!"
-  }])
+  example: "Que guay!",
+  country: "Spain"},
+
+  {phrase: "Estás más loca que una cabra",
+   translation: "You are crazier than a goat",
+   example: "Que haces?? Estás más loca que una cabra!",
+   country: "Spain"}
+
+  ])

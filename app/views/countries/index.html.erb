@@ -1,1 +1,15 @@
-index.html.erb
+<head>
+<link href="https://fonts.googleapis.com/css?family=Bungee+Hairline|Bungee+Shade|Monoton" rel="stylesheet">
+</head>
+
+<div class="form" id="c1">
+<% @countries.each do |country| %>
+ <div><strong><%= country.name %></strong></div>
+<ul>
+ <div><%= country.gov_type %></div>
+ <div><%= country.population %></div>
+ <div><%= country.capitol %></div>
+</ul>
+
+<% end %>
+</div>

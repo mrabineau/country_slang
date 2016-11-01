@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root "users#index"
+  root "sessions#new"
 
   resources :users
   resources :countries do
@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   # Create a better looking URL for logging in
   get '/login', to: 'sessions#new'
+
+
 end
