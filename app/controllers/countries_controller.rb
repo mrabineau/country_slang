@@ -27,25 +27,26 @@ class CountriesController < ApplicationController
 
   def update
     @country = Country.find(params[:id])
-    if @country.update_attributes(params)
+    if @country.update_attributes(params.require(:country).permit(:name, :gov_type, :population, :capitol))
+      redirect_to countries_path
       else
         render 'edit'
     end
-  ends
+  end
 
   def destroy
     @country = Country.find(params[:id])
     @country.destroy
-    redirect_to country_slangs_path
+    redirect_to countries_path
   end
 
-  private
-  def params
-    params.require(:country).permit(:name, :gov_type, :population, :capitol)
+  # private
+  # def params
+  #   params.require(:country).permit(:name, :gov_type, :population, :capitol)
 
-  end
+  # end
 end
 
-end
+
 
 
