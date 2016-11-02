@@ -1,6 +1,7 @@
 class SlangsController < ApplicationController
   def index
-    @slangs = Slang.all
+    @country = Country.find(params[:country_id])
+    @slangs = @country.slangs
   end
 
   def show
@@ -20,7 +21,8 @@ class SlangsController < ApplicationController
 
   def create
     @country = Country.find(params[:country_id])
-    @slang = @country.slangs.new(params.require(:slang).permit(:phrase, :translation, :example))
+    @slang = @country.slangs.new(slang_params)
+    @slang.user_id = current_user.id
     if @slang.save
       redirect_to country_slangs_path
       else

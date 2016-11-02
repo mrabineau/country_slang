@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.delete_all
+# User.delete_all
 Slang.delete_all
 Country.delete_all
 
@@ -31,7 +31,13 @@ countries = Country.create([
   {name: "Peru",
    gov_type: "Constitutional Republic",
    population: 31000000,
-   capitol: "Lima"}
+   capitol: "Lima"},
+
+  {name: "Mexico",
+   gov_type: "Constitutional Republic",
+   population: 119000000,
+   capitol: "Ciudad Mexico Distrito Federal"}
+
 
   ])
 
@@ -64,6 +70,18 @@ slangs = Slang.create ([
     translation: "Burrrr",
     example: "  ",
     country_id: countries[1].id,
-    user_id: users[0].id}
+    user_id: users[0].id},
+
+    {phrase: "Me vale madre",
+    translation: "I don't give a fuck",
+    example: " ",
+    country_id: countries[3].id,
+    user_id: users[0].id},
+
+    {phrase: "padre",
+     translation: "cool",
+     example: "  ",
+     country_id: countries[3].id,
+     user_id: users[0].id}
 
   ])

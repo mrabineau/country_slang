@@ -19,7 +19,7 @@
            <div><strong>Example:  </strong><%= slang.example %></div>
            </li>
            <li class="list-group-item">
-           <div><strong>Country:  </strong><%= slang.country %></div>
+           <div><strong>Country:  </strong><%= slang.country.name %></div>
            </li>
 
         <%= link_to "edit me", edit_country_slang_path(params[:country_id], slang.id)%> <br>
