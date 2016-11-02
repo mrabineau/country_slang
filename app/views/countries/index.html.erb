@@ -6,7 +6,7 @@
   <div class="col-md-8 col-md-offset-1 col-lg-10 col-lg-offset-1">
     <div class="form" id="c1">
       <% @countries.each do |country| %>
-       <div><strong><%= link_to country.name, country_path(country) %></strong></div>
+       <div><strong><%= link_to country.name, country_slangs_path(country) %></strong></div>
         <ul class="list-group">
            <li class="list-group-item">
            <div><strong>Government Type:  </strong> <%= country.gov_type %></div>

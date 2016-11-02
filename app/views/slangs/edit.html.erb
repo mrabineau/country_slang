@@ -1,1 +1,35 @@
-edit.html.erb
+<head>
+<link href="https://fonts.googleapis.com/css?family=Bungee+Hairline|Bungee+Shade|Monoton" rel="stylesheet">
+</head>
+
+<h1 class="changefont">Edit</h1>
+
+
+<div class="col-md-8 col-md-offset-1 col-lg-10 col-lg-offset-1">
+    <div class="form" id="c1">
+      <%= form_for @slang, url: "/countries/#{@country.id}/slangs/#{@slang.id}", method: :patch do |s| %>
+        <ul class="list-group">
+            <li class="list-group-item">
+            <div>
+              <%= s.label :phrase %>
+              <%= s.text_field :phrase %>
+            </div>
+            </li>
+            <li class="list-group-item">
+             <div>
+              <%= s.label :translation %>
+              <%= s.text_field :translation %>
+            </div>
+            </li>
+            <li class="list-group-item">
+             <div>
+              <%= s.label :example %>
+              <%= s.text_field :example %>
+            </div>
+            </li>
+        </ul>
+
+<button class="btn btn-default" type="submit"><%= s.submit "Save" %></button>
+
+<% end %>
+<%= link_to "Back to slang page!!", country_slangs_path %>

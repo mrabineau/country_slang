@@ -9,25 +9,29 @@ class SlangsController < ApplicationController
 
 
   def new
+    @country = Country.find(params[:country_id])
     @slang = Slang.new
   end
 
   def edit
+    @country = Country.find(params[:country_id])
     @slang = Slang.find(params[:id])
   end
 
   def create
-    @slang = Slang.new(params)
+    @country = Country.find(params[:country_id])
+    @slang = @country.slangs.new(params.require(:slang).permit(:phrase, :translation, :example))
     if @slang.save
       redirect_to country_slangs_path
-    else
+      else
       render 'new'
     end
   end
 
   def update
     @slang = Slang.find(params[:id])
-    if @slang.update_attributes(params)
+    if @slang.update_attributes(slang_params)
+      redirect_to country_slangs_path
       else
         render 'edit'
     end
@@ -36,12 +40,12 @@ class SlangsController < ApplicationController
   def destroy
     @slang = Slang.find(params[:id])
     @slang.destroy
-    redirect_to country_slangs_path
+    redirect_to country_slangs_path, alert: "Deleted"
   end
 
   private
-  def params
-    params.require(:slangs).permit(:phrase, :translation, :example)
+  def slang_params
+    params.require(:slang).permit(:phrase, :translation, :example)
 
   end
 end

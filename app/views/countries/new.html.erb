@@ -1,28 +1,43 @@
+<head>
+<link href="https://fonts.googleapis.com/css?family=Bungee+Hairline|Bungee+Shade|Monoton" rel="stylesheet">
+</head>
 
-<h1>Add a new country!</h1>
 
-<%= form_for @country do |c| %>
-  <div>
-    <%= c.label :Name %>
-    <%= c.text_field :name %>
-  </div>
+  <div class="col-md-8 col-md-offset-1 col-lg-10 col-lg-offset-1">
+    <div class="form" id="c1">
 
-   <div>
-    <%= c.label :gov_type %>
-    <%= c.text_field :gov_type %>
-  </div>
+      <h1>Add a new country!</h1>
+        <ul class="list-group">
+          <%= form_for @country do |c| %>
 
-   <div>
-    <%= c.label :population %>
-    <%= c.text_field :population %>
-  </div>
+            <li class="list-group-item">
+            <div>
+              <%= c.label :Name %>
+              <%= c.text_field :name %>
+            </div>
+            </li>
+            <li class="list-group-item">
+             <div>
+              <%= c.label :gov_type %>
+              <%= c.text_field :gov_type %>
+            </div>
+            </li>
+            <li class="list-group-item">
+             <div>
+              <%= c.label :population %>
+              <%= c.text_field :population %>
+            </div>
+            </li>
+            <li class="list-group-item">
+             <div>
+              <%= c.label :captiol %>
+              <%= c.text_field :capitol %>
+            </div>
+            </li>
+        </ul>
+    <%= c.submit "Save" %>
 
-   <div>
-    <%= c.label :captiol %>
-    <%= c.text_field :capitol %>
-  </div>
-
-<%= c.submit "Save" %>
-
-<% end %>
-<%= link_to "Back to countries!", countries_path %>
+  <% end %>
+  <%= link_to "Back to countries!", countries_path %>
+</div>
+</div>

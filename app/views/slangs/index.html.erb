@@ -4,7 +4,7 @@
 </head>
 
 
-  <div class="col-md-1 col-md-offset-4">
+  <div class="col-md-8 col-md-offset-1 col-lg-10 col-lg-offset-1">
     <div class="form" id="c1">
       <% @slangs.each do |slang| %>
        <div><strong><%= slang.phrase %></strong></div>
@@ -22,10 +22,13 @@
            <div><strong>Country:  </strong><%= slang.country %></div>
            </li>
 
+        <%= link_to "edit me", edit_country_slang_path(params[:country_id], slang.id)%> <br>
+         <%= link_to "delete me", country_slang_path(params[:country_id], slang.id), method: :delete, data: {confirm: "Are you sure???"} %>
         </ul>
 
       <% end %>
 
 
-    <div id="add"><strong><%= link_to "Add some slang!", new_country_path %></strong></div>
+    <div id="add"><strong><%= link_to "Add some slang!", new_country_slang_path %></strong></div>
     </div>
+    <%= link_to "Back to countries!", countries_path %>
