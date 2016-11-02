@@ -5,23 +5,31 @@
 </head>
 
 <div class="center-block">
-<h1>Oye!</h1>
-<h3>Sign In</h3>
-<form>
-<%= form_tag sessions_path do %>
-  <div class="form-group">
-    <%= label_tag :email %>
-    <%= text_field_tag :email, params[:email] %>
-  </div>
-  <div class="form-group">
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-  </div>
-  <button type="submit" class="btn btn-default"><%= submit_tag "Log In" %></button>
-<p id="alert"><%= alert %></p>
-<%= link_to "Sign up!", new_user_path %>
-<% end %>
-</form>
+    <form>
+    <div class ="center-text">
+      <h1>Oye!</h1>
+      <h3>Sign In</h3>
+    </div>
+      <ul class= "list-group">
+        <%= form_tag sessions_path do %>
+        <li class="list-group-item">
+            <div class="form-group">
+              <%= label_tag :email %>
+              <%= text_field_tag :email, params[:email] %>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="form-group">
+              <%= label_tag :password %>
+              <%= password_field_tag :password %>
+            </div>
+          </li>
+          <button type="submit" class="btn btn-default"><%= submit_tag "Log In" %></button>
+        <!-- <p id="alert"><%= alert %></p> -->
+        <%= link_to "Sign up!", new_user_path %>
+        <% end %>
+      </ul>
+    </form>
 </div>
 
 <!-- <img src="https://userscontent2.emaze.com/images/a8dbd5bc-ec94-4cb7-a89d-426252953763/bae47c76-3abf-4bc6-b8a1-6eeddb7f6c3aimage96.png" class="img-responsive" alt="Responsive image">

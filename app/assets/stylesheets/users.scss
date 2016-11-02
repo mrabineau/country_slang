@@ -2,18 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 .center-block {
   display: block;
   margin-left: auto;
   margin-right: auto;
+
 }
 
 .center-block h1 {
-  font-family: 'Monoton', cursive;
+  font-family: 'Bungee Shade', cursive;
 }
 
 .center-block h3 {
-  font-family: 'Monoton', cursive;
+  font-family: 'Bungee Shade', cursive;
 }
 .form-group {
   color: red;
@@ -22,5 +24,17 @@
 }
 
 .center-block button {
+  font-family: 'Bungee Hairline', cursive;
+}
+
+#signup {
+  font-family: 'Bungee Shade', cursive;
+}
+
+#fonts {
+  font-family: 'Bungee Hairline', cursive;
+}
+
+#c1 {
   font-family: 'Bungee Hairline', cursive;
 }

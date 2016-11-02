@@ -28,18 +28,26 @@ countries = Country.create([
   population: 16000000,
   capitol: "Quito"},
 
-  {name: "Peru",
-   gov_type: "Constitutional Republic",
-   population: 31000000,
-   capitol: "Lima"},
-
   {name: "Mexico",
    gov_type: "Constitutional Republic",
    population: 119000000,
-   capitol: "Ciudad Mexico Distrito Federal"}
+   capitol: "Ciudad Mexico Distrito Federal"},
 
+   {name: "Dominican Republic",
+   gov_type: "Unitary Presidential Republic",
+   population: 10000000,
+   capitol: "Santo Domingo"},
 
-  ])
+  {name: "Colombia",
+   gov_type: "Unitary Presidential Republic",
+   population: 48000000,
+   capitol: "Bogotá"},
+
+  {name: "Peru",
+   gov_type: "Constitutional Republic",
+   population: 31000000,
+   capitol: "Lima"}
+   ])
 
 slangs = Slang.create ([
   {phrase: "Guay",
@@ -54,34 +62,70 @@ slangs = Slang.create ([
    country_id: countries[0].id,
    user_id: users[0].id},
 
+   {phrase: "Follón",
+    translation: "clusterfuck",
+    example: "Que tal el concierto? Un follón, hubo muchisima gente.",
+    country_id: countries[0].id,
+    user_id: users[0].id},
+
+    {phrase: "Me cago en la leche",
+     translation: "For fucks sake",
+     example: "Perdí mi vuelo. Me cago en la leche.",
+     country_id: countries[0].id,
+     user_id: users[0].id},
+
    {phrase: "Guagua",
     translation: "Baby",
-    example: " ",
+    example: "La guagua hoy cumple un año",
     country_id: countries[1].id,
     user_id: users[0].id},
 
    {phrase: "Símon",
     translation: "Yes",
-    example: " ",
+    example: "Usted quiere ir a la playa? Símon!",
     country_id: countries[1].id,
     user_id: users[0].id},
 
    {phrase: "Ay chichi",
     translation: "Burrrr",
-    example: "  ",
+    example: "Ay chichi, que frio hace",
     country_id: countries[1].id,
     user_id: users[0].id},
 
     {phrase: "Me vale madre",
     translation: "I don't give a fuck",
-    example: " ",
-    country_id: countries[3].id,
+    example: "Que quiere hacer hoy? Me vale madre.",
+    country_id: countries[2].id,
     user_id: users[0].id},
 
-    {phrase: "padre",
+    {phrase: "Padre",
      translation: "cool",
-     example: "  ",
+     example: "Que te parece el carro? Está padre!",
+     country_id: countries[2].id,
+     user_id: users[0].id},
+
+     {phrase: "Vaina",
+     translation: "Has many meanings but in its simplest form: that",
+     example: "Dame esa vaina",
      country_id: countries[3].id,
-     user_id: users[0].id}
+     user_id: users[0].id},
+
+     {phrase: "Bacano",
+     translation: "cool",
+     example: "Mi pelo esta súper bacano, no?",
+     country_id: countries[3].id,
+     user_id: users[0].id},
+
+     {phrase: "Polas",
+     translation: "beer",
+     example: "Páseme unas polas, bien frias por favor",
+     country_id: countries[4].id,
+     user_id: users[0].id},
+
+     {phrase: "Rumbiar",
+     translation: "To party",
+     example: "Esta noche rumbiamos. Preparate!",
+     country_id: countries[4].id,
+     user_id: users[0].id},
 
   ])
