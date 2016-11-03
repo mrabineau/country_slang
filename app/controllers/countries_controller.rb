@@ -42,7 +42,7 @@ class CountriesController < ApplicationController
 
   # private
   # def params
-  #   params.require(:country).permit(:name, :gov_type, :population, :capitol)
+  #   params.require(:country).permit(:id, :gov_type, :population, :capitol)
 
   # end
 end

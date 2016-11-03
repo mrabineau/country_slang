@@ -22,3 +22,28 @@
 //   }
 //     $(".imageload").style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Flag_of_the_Second_Spanish_Republic_(plain).svg/1280px-Flag_of_the_Second_Spanish_Republic_(plain).svg.png')"
 // }
+
+
+// function changeBackground () {
+// var background = window.location.search.split('=')[1]
+//   for (var i = 0; i < background.length; i ++){
+//   if (background === "Spain") {
+//     $(this).style.backgroundColor="red";
+
+//     }
+//   }
+// };
+
+// changeBackground ();
+
+// var background = window.location.search.split('=')[1]
+
+// function changeBackground () {
+//   if (background == "Spain") {
+//     console.log("true")
+
+
+//   }
+// };
+
+// changeBackground ();
