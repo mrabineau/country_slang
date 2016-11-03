@@ -43,6 +43,18 @@ countries = Country.create([
    population: 48000000,
    capitol: "Bogotá"},
 
+   {name: "Argentina",
+   gov_type: "Unitary Presidential Republic",
+   population: 43000000,
+   capitol: "Bueno Aires"},
+
+
+   {name: "Uruguay",
+   gov_type: "Unitary Presidential Republic",
+   population: 3000000,
+   capitol: "Montevideo"},
+
+
   {name: "Peru",
    gov_type: "Constitutional Republic",
    population: 31000000,
@@ -126,6 +138,39 @@ slangs = Slang.create ([
      translation: "To party",
      example: "Esta noche rumbiamos. Preparate!",
      country_id: countries[4].id,
+     user_id: users[0].id},
+
+     {phrase: "Más dificil que cagar en un frasquito",
+     translation: "More difficult than shitting in a little jar",
+     example: "I honestly couldn't tell you but I love this.",
+     country_id: countries[5].id,
+     user_id: users[0].id},
+
+
+     {phrase: "Me pica el bagre",
+     translation: "I'm hungry",
+     example: "Comimos algo? Me pica el bagre.",
+     country_id: countries[5].id,
+     user_id: users[0].id},
+
+
+     {phrase: "Me pica el bagre",
+     translation: "I'm hungry",
+     example: "Comimos algo? Me pica el bagre.",
+     country_id: countries[5].id,
+     user_id: users[0].id},
+
+     {phrase: "Bárbaro",
+     translation: "Wonderful, great",
+     example: "  ",
+     country_id: countries[6].id,
+     user_id: users[0].id},
+
+
+     {phrase: "Gurís/gurizas",
+     translation: "guys/girls/homies",
+     example: "  ",
+     country_id: countries[6].id,
      user_id: users[0].id},
 
   ])

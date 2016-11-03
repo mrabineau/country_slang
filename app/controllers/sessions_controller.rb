@@ -1,14 +1,12 @@
 class SessionsController < ApplicationController
 
-
   def new
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to countries_path, notice: 'Logged in!'
+      redirect_to countries_path, notice:  'Logged in!'
     else
-      flash.alert = 'Invalid login credentials - try again!'
-      render 'new'
+
     end
   end
 

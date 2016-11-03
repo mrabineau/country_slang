@@ -14,3 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(.imageload).on("pagecontainerload", function() {
+  for (i = 0, i < countries.length, i ++ ) {
+    if countries[i].id === countries[1].id
+  }
+    $(.imageload).style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Flag_of_the_Second_Spanish_Republic_(plain).svg/1280px-Flag_of_the_Second_Spanish_Republic_(plain).svg.png')"
+}
