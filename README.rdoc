@@ -1,3 +1,5 @@
+Heroku link: https://tranquil-temple-83514.herokuapp.com/
+
 == README
 
 This README would normally document whatever steps are necessary to get the
@@ -21,20 +23,6 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
 
-The concept of this website is to keep a log of different colloquialisms from
-different Spanish speaking countries. It goes without saying that my list of countries
-and phrases is extremely deficient. In an ideal world, if this was a "real" website
-it would be seeded with data by users who are actually from these countries. I would also eventuallly
-like to include more information and make it a "cultural travel guide" that includes
-references to things such as art, literature, and music for each country. Users are able to login (or sign up) and continue to the page of
-countries, from which they can select a single one and see the phrases associated with it.
-
-I used ruby on rails to write the code and bootstrap and googlefonts for styling.
-
-The sight is deployed on heroku so there is no need for installation.
